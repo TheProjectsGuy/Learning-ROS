@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/stark/ROS_workspaces/ros_ws/devel/setup.sh
