@@ -3,6 +3,6 @@ prefix=/home/stark/ROS_workspaces/ros_ws/devel
 Name: intro_pkg1
 Description: Description of intro_pkg1
 Version: 0.0.0
-Cflags: 
+Cflags: -I/home/stark/ROS_workspaces/ros_ws/devel/include
 Libs: -L/home/stark/ROS_workspaces/ros_ws/devel/lib 
-Requires: 
+Requires: message_runtime
