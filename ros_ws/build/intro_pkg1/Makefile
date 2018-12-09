@@ -168,6 +168,21 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule
+
+# Convenience name for target.
+NumberSubscriber: intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule
+
+.PHONY : NumberSubscriber
+
+# fast build rule for target.
+NumberSubscriber/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/build
+.PHONY : NumberSubscriber/fast
+
+# Convenience name for target.
 intro_pkg1/CMakeFiles/AllLevelDebugger.dir/rule:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/AllLevelDebugger.dir/rule
 .PHONY : intro_pkg1/CMakeFiles/AllLevelDebugger.dir/rule
@@ -301,6 +316,21 @@ std_msgs_generate_messages_cpp: intro_pkg1/CMakeFiles/std_msgs_generate_messages
 std_msgs_generate_messages_cpp/fast:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+# Convenience name for target.
+intro_pkg1/CMakeFiles/NumberPublisher.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/NumberPublisher.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/NumberPublisher.dir/rule
+
+# Convenience name for target.
+NumberPublisher: intro_pkg1/CMakeFiles/NumberPublisher.dir/rule
+
+.PHONY : NumberPublisher
+
+# fast build rule for target.
+NumberPublisher/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/build
+.PHONY : NumberPublisher/fast
 
 # Convenience name for target.
 intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule:
@@ -476,6 +506,60 @@ src/DebuggerAll.cpp.s:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/AllLevelDebugger.dir/build.make intro_pkg1/CMakeFiles/AllLevelDebugger.dir/src/DebuggerAll.cpp.s
 .PHONY : src/DebuggerAll.cpp.s
 
+src/NumberPublisher.o: src/NumberPublisher.cpp.o
+
+.PHONY : src/NumberPublisher.o
+
+# target to build an object file
+src/NumberPublisher.cpp.o:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/src/NumberPublisher.cpp.o
+.PHONY : src/NumberPublisher.cpp.o
+
+src/NumberPublisher.i: src/NumberPublisher.cpp.i
+
+.PHONY : src/NumberPublisher.i
+
+# target to preprocess a source file
+src/NumberPublisher.cpp.i:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/src/NumberPublisher.cpp.i
+.PHONY : src/NumberPublisher.cpp.i
+
+src/NumberPublisher.s: src/NumberPublisher.cpp.s
+
+.PHONY : src/NumberPublisher.s
+
+# target to generate assembly for a file
+src/NumberPublisher.cpp.s:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/src/NumberPublisher.cpp.s
+.PHONY : src/NumberPublisher.cpp.s
+
+src/NumberSubscriber.o: src/NumberSubscriber.cpp.o
+
+.PHONY : src/NumberSubscriber.o
+
+# target to build an object file
+src/NumberSubscriber.cpp.o:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/src/NumberSubscriber.cpp.o
+.PHONY : src/NumberSubscriber.cpp.o
+
+src/NumberSubscriber.i: src/NumberSubscriber.cpp.i
+
+.PHONY : src/NumberSubscriber.i
+
+# target to preprocess a source file
+src/NumberSubscriber.cpp.i:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/src/NumberSubscriber.cpp.i
+.PHONY : src/NumberSubscriber.cpp.i
+
+src/NumberSubscriber.s: src/NumberSubscriber.cpp.s
+
+.PHONY : src/NumberSubscriber.s
+
+# target to generate assembly for a file
+src/NumberSubscriber.cpp.s:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/src/NumberSubscriber.cpp.s
+.PHONY : src/NumberSubscriber.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -486,6 +570,7 @@ help:
 	@echo "... install/local"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... NumberSubscriber"
 	@echo "... AllLevelDebugger"
 	@echo "... list_install_components"
 	@echo "... roscpp_generate_messages_py"
@@ -497,6 +582,7 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... NumberPublisher"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
@@ -512,6 +598,12 @@ help:
 	@echo "... src/DebuggerAll.o"
 	@echo "... src/DebuggerAll.i"
 	@echo "... src/DebuggerAll.s"
+	@echo "... src/NumberPublisher.o"
+	@echo "... src/NumberPublisher.i"
+	@echo "... src/NumberPublisher.s"
+	@echo "... src/NumberSubscriber.o"
+	@echo "... src/NumberSubscriber.i"
+	@echo "... src/NumberSubscriber.s"
 .PHONY : help
 
 

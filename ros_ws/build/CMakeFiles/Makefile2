@@ -264,7 +264,7 @@ gtest/googlemock/preinstall: gtest/googlemock/gtest/preinstall
 gtest/googlemock/CMakeFiles/gmock_main.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock_main.dir/build.make gtest/googlemock/CMakeFiles/gmock_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=8,9,10,11 "Built target gmock_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=12,13,14,15 "Built target gmock_main"
 .PHONY : gtest/googlemock/CMakeFiles/gmock_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -296,7 +296,7 @@ clean: gtest/googlemock/CMakeFiles/gmock_main.dir/clean
 gtest/googlemock/CMakeFiles/gmock.dir/all:
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/depend
 	$(MAKE) -f gtest/googlemock/CMakeFiles/gmock.dir/build.make gtest/googlemock/CMakeFiles/gmock.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=5,6,7 "Built target gmock"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=9,10,11 "Built target gmock"
 .PHONY : gtest/googlemock/CMakeFiles/gmock.dir/all
 
 # Build rule for subdir invocation for target.
@@ -347,7 +347,7 @@ gtest/googlemock/gtest/preinstall:
 gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all: gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=14,15 "Built target gtest_main"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=18,19 "Built target gtest_main"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/all
 
 # Build rule for subdir invocation for target.
@@ -379,7 +379,7 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest_main.dir/clean
 gtest/googlemock/gtest/CMakeFiles/gtest.dir/all:
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/depend
 	$(MAKE) -f gtest/googlemock/gtest/CMakeFiles/gtest.dir/build.make gtest/googlemock/gtest/CMakeFiles/gtest.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=12,13 "Built target gtest"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=16,17 "Built target gtest"
 .PHONY : gtest/googlemock/gtest/CMakeFiles/gtest.dir/all
 
 # Build rule for subdir invocation for target.
@@ -408,12 +408,15 @@ clean: gtest/googlemock/gtest/CMakeFiles/gtest.dir/clean
 # Directory level rules for directory intro_pkg1
 
 # Convenience name for "all" pass in the directory.
+intro_pkg1/all: intro_pkg1/CMakeFiles/NumberSubscriber.dir/all
 intro_pkg1/all: intro_pkg1/CMakeFiles/AllLevelDebugger.dir/all
+intro_pkg1/all: intro_pkg1/CMakeFiles/NumberPublisher.dir/all
 intro_pkg1/all: intro_pkg1/CMakeFiles/ArgumentParser.dir/all
 
 .PHONY : intro_pkg1/all
 
 # Convenience name for "clean" pass in the directory.
+intro_pkg1/clean: intro_pkg1/CMakeFiles/NumberSubscriber.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/AllLevelDebugger.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/roscpp_generate_messages_py.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/roscpp_generate_messages_eus.dir/clean
@@ -423,6 +426,7 @@ intro_pkg1/clean: intro_pkg1/CMakeFiles/std_msgs_generate_messages_lisp.dir/clea
 intro_pkg1/clean: intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+intro_pkg1/clean: intro_pkg1/CMakeFiles/NumberPublisher.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 intro_pkg1/clean: intro_pkg1/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
@@ -438,6 +442,43 @@ intro_pkg1/clean: intro_pkg1/CMakeFiles/ArgumentParser.dir/clean
 intro_pkg1/preinstall:
 
 .PHONY : intro_pkg1/preinstall
+
+#=============================================================================
+# Target rules for target intro_pkg1/CMakeFiles/NumberSubscriber.dir
+
+# All Build rule for target.
+intro_pkg1/CMakeFiles/NumberSubscriber.dir/all:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/depend
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=7,8 "Built target NumberSubscriber"
+.PHONY : intro_pkg1/CMakeFiles/NumberSubscriber.dir/all
+
+# Include target in all.
+all: intro_pkg1/CMakeFiles/NumberSubscriber.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stark/ROS_workspaces/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/NumberSubscriber.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stark/ROS_workspaces/ros_ws/build/CMakeFiles 0
+.PHONY : intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule
+
+# Convenience name for target.
+NumberSubscriber: intro_pkg1/CMakeFiles/NumberSubscriber.dir/rule
+
+.PHONY : NumberSubscriber
+
+# clean rule for target.
+intro_pkg1/CMakeFiles/NumberSubscriber.dir/clean:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/clean
+.PHONY : intro_pkg1/CMakeFiles/NumberSubscriber.dir/clean
+
+# clean rule for target.
+clean: intro_pkg1/CMakeFiles/NumberSubscriber.dir/clean
+
+.PHONY : clean
 
 #=============================================================================
 # Target rules for target intro_pkg1/CMakeFiles/AllLevelDebugger.dir
@@ -729,6 +770,43 @@ intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
 
 # clean rule for target.
 clean: intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : clean
+
+#=============================================================================
+# Target rules for target intro_pkg1/CMakeFiles/NumberPublisher.dir
+
+# All Build rule for target.
+intro_pkg1/CMakeFiles/NumberPublisher.dir/all:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/depend
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=5,6 "Built target NumberPublisher"
+.PHONY : intro_pkg1/CMakeFiles/NumberPublisher.dir/all
+
+# Include target in all.
+all: intro_pkg1/CMakeFiles/NumberPublisher.dir/all
+
+.PHONY : all
+
+# Build rule for subdir invocation for target.
+intro_pkg1/CMakeFiles/NumberPublisher.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stark/ROS_workspaces/ros_ws/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/NumberPublisher.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/stark/ROS_workspaces/ros_ws/build/CMakeFiles 0
+.PHONY : intro_pkg1/CMakeFiles/NumberPublisher.dir/rule
+
+# Convenience name for target.
+NumberPublisher: intro_pkg1/CMakeFiles/NumberPublisher.dir/rule
+
+.PHONY : NumberPublisher
+
+# clean rule for target.
+intro_pkg1/CMakeFiles/NumberPublisher.dir/clean:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/clean
+.PHONY : intro_pkg1/CMakeFiles/NumberPublisher.dir/clean
+
+# clean rule for target.
+clean: intro_pkg1/CMakeFiles/NumberPublisher.dir/clean
 
 .PHONY : clean
 

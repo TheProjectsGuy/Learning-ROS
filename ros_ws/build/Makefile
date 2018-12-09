@@ -285,6 +285,19 @@ gtest/fast:
 .PHONY : gtest/fast
 
 #=============================================================================
+# Target rules for targets named NumberSubscriber
+
+# Build rule for target.
+NumberSubscriber: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NumberSubscriber
+.PHONY : NumberSubscriber
+
+# fast build rule for target.
+NumberSubscriber/fast:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberSubscriber.dir/build.make intro_pkg1/CMakeFiles/NumberSubscriber.dir/build
+.PHONY : NumberSubscriber/fast
+
+#=============================================================================
 # Target rules for targets named AllLevelDebugger
 
 # Build rule for target.
@@ -400,6 +413,19 @@ std_msgs_generate_messages_cpp: cmake_check_build_system
 std_msgs_generate_messages_cpp/fast:
 	$(MAKE) -f intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make intro_pkg1/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
 .PHONY : std_msgs_generate_messages_cpp/fast
+
+#=============================================================================
+# Target rules for targets named NumberPublisher
+
+# Build rule for target.
+NumberPublisher: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 NumberPublisher
+.PHONY : NumberPublisher
+
+# fast build rule for target.
+NumberPublisher/fast:
+	$(MAKE) -f intro_pkg1/CMakeFiles/NumberPublisher.dir/build.make intro_pkg1/CMakeFiles/NumberPublisher.dir/build
+.PHONY : NumberPublisher/fast
 
 #=============================================================================
 # Target rules for targets named rosgraph_msgs_generate_messages_nodejs
@@ -527,6 +553,7 @@ help:
 	@echo "... gmock"
 	@echo "... gtest_main"
 	@echo "... gtest"
+	@echo "... NumberSubscriber"
 	@echo "... AllLevelDebugger"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... roscpp_generate_messages_eus"
@@ -536,6 +563,7 @@ help:
 	@echo "... roscpp_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
 	@echo "... std_msgs_generate_messages_cpp"
+	@echo "... NumberPublisher"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... std_msgs_generate_messages_eus"
