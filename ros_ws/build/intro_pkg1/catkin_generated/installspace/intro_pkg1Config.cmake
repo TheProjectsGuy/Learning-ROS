@@ -152,7 +152,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(intro_pkg1_EXPORTED_TARGETS "intro_pkg1_generate_messages_cpp;intro_pkg1_generate_messages_eus;intro_pkg1_generate_messages_lisp;intro_pkg1_generate_messages_nodejs;intro_pkg1_generate_messages_py")
+set(intro_pkg1_EXPORTED_TARGETS "intro_pkg1_generate_messages_cpp;intro_pkg1_generate_messages_eus;intro_pkg1_generate_messages_lisp;intro_pkg1_generate_messages_nodejs;intro_pkg1_generate_messages_py;intro_pkg1_gencfg")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${intro_pkg1_EXPORTED_TARGETS})
   if(NOT TARGET ${t})

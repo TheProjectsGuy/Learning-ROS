@@ -1,0 +1,11 @@
+\subsubsection usage Usage
+\verbatim
+<node name="intro_pkg1" pkg="intro_pkg1" type="intro_pkg1">
+  <param name="integer" type="int" value="0" />
+  <param name="double" type="double" value="0.0" />
+  <param name="string" type="str" value="String Here" />
+  <param name="bool" type="bool" value="False" />
+  <param name="Size" type="int" value="0" />
+</node>
+\endverbatim
+
