@@ -2,9 +2,9 @@
 
 Reads and maintains the following parameters on the ROS server
 
-- \b "~integer" : \b [int] An integer parameter min: -5, default: 0, max: 5
-- \b "~double" : \b [double] A double parameter min: -2.0, default: 0.0, max: 2.0
-- \b "~string" : \b [str] A string parameter min: , default: String Here, max: 
-- \b "~bool" : \b [bool] A boolean parameter min: False, default: False, max: True
+- \b "~Integer_param" : \b [int] An integer parameter min: -5, default: 0, max: 5
+- \b "~Double_param" : \b [double] A double parameter min: -2.0, default: 0.0, max: 2.0
+- \b "~String_param" : \b [str] A string parameter min: , default: String Here, max: 
+- \b "~Bool_param" : \b [bool] A boolean parameter min: False, default: False, max: True
 - \b "~Size" : \b [int] Size dropdown min: 0, default: 0, max: 3
 

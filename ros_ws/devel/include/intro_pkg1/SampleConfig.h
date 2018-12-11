@@ -236,18 +236,18 @@ class DEFAULT
         boost::any val;
         (*_i)->getValue(config, val);
 
-        if("integer"==(*_i)->name){integer = boost::any_cast<int>(val);}
-        if("double"==(*_i)->name){double = boost::any_cast<double>(val);}
-        if("string"==(*_i)->name){string = boost::any_cast<std::string>(val);}
-        if("bool"==(*_i)->name){bool = boost::any_cast<bool>(val);}
+        if("Integer_param"==(*_i)->name){Integer_param = boost::any_cast<int>(val);}
+        if("Double_param"==(*_i)->name){Double_param = boost::any_cast<double>(val);}
+        if("String_param"==(*_i)->name){String_param = boost::any_cast<std::string>(val);}
+        if("Bool_param"==(*_i)->name){Bool_param = boost::any_cast<bool>(val);}
         if("Size"==(*_i)->name){Size = boost::any_cast<int>(val);}
       }
     }
 
-    int integer;
-double double;
-std::string string;
-bool bool;
+    int Integer_param;
+double Double_param;
+std::string String_param;
+bool Bool_param;
 int Size;
 
     bool state;
@@ -259,13 +259,13 @@ int Size;
 
 
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      int integer;
+      int Integer_param;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      double double;
+      double Double_param;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      std::string string;
+      std::string String_param;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      bool bool;
+      bool Bool_param;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       int Size;
 //#line 228 "/opt/ros/melodic/share/dynamic_reconfigure/cmake/../templates/ConfigType.h.template"
@@ -407,45 +407,45 @@ int Size;
     {
 SampleConfig::GroupDescription<SampleConfig::DEFAULT, SampleConfig> Default("Default", "", 0, 0, true, &SampleConfig::groups);
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.integer = -5;
+      __min__.Integer_param = -5;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.integer = 5;
+      __max__.Integer_param = 5;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.integer = 0;
+      __default__.Integer_param = 0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<int>("integer", "int", 0, "An integer parameter", "", &SampleConfig::integer)));
+      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<int>("Integer_param", "int", 0, "An integer parameter", "", &SampleConfig::Integer_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<int>("integer", "int", 0, "An integer parameter", "", &SampleConfig::integer)));
+      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<int>("Integer_param", "int", 0, "An integer parameter", "", &SampleConfig::Integer_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.double = -2.0;
+      __min__.Double_param = -2.0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.double = 2.0;
+      __max__.Double_param = 2.0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.double = 0.0;
+      __default__.Double_param = 0.0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<double>("double", "double", 0, "A double parameter", "", &SampleConfig::double)));
+      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<double>("Double_param", "double", 0, "A double parameter", "", &SampleConfig::Double_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<double>("double", "double", 0, "A double parameter", "", &SampleConfig::double)));
+      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<double>("Double_param", "double", 0, "A double parameter", "", &SampleConfig::Double_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.string = "";
+      __min__.String_param = "";
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.string = "";
+      __max__.String_param = "";
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.string = "String Here";
+      __default__.String_param = "String Here";
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<std::string>("string", "str", 0, "A string parameter", "", &SampleConfig::string)));
+      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<std::string>("String_param", "str", 0, "A string parameter", "", &SampleConfig::String_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<std::string>("string", "str", 0, "A string parameter", "", &SampleConfig::string)));
+      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<std::string>("String_param", "str", 0, "A string parameter", "", &SampleConfig::String_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __min__.bool = 0;
+      __min__.Bool_param = 0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __max__.bool = 1;
+      __max__.Bool_param = 1;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __default__.bool = 0;
+      __default__.Bool_param = 0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<bool>("bool", "bool", 0, "A boolean parameter", "", &SampleConfig::bool)));
+      Default.abstract_parameters.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<bool>("Bool_param", "bool", 0, "A boolean parameter", "", &SampleConfig::Bool_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
-      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<bool>("bool", "bool", 0, "A boolean parameter", "", &SampleConfig::bool)));
+      __param_descriptions__.push_back(SampleConfig::AbstractParamDescriptionConstPtr(new SampleConfig::ParamDescription<bool>("Bool_param", "bool", 0, "A boolean parameter", "", &SampleConfig::Bool_param)));
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"
       __min__.Size = 0;
 //#line 291 "/opt/ros/melodic/lib/python2.7/dist-packages/dynamic_reconfigure/parameter_generator_catkin.py"

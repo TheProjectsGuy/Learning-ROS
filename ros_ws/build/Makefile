@@ -636,6 +636,19 @@ roscpp_generate_messages_eus/fast:
 .PHONY : roscpp_generate_messages_eus/fast
 
 #=============================================================================
+# Target rules for targets named cpp_config
+
+# Build rule for target.
+cpp_config: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 cpp_config
+.PHONY : cpp_config
+
+# fast build rule for target.
+cpp_config/fast:
+	$(MAKE) -f intro_pkg1/CMakeFiles/cpp_config.dir/build.make intro_pkg1/CMakeFiles/cpp_config.dir/build
+.PHONY : cpp_config/fast
+
+#=============================================================================
 # Target rules for targets named roscpp_generate_messages_py
 
 # Build rule for target.
@@ -892,6 +905,7 @@ help:
 	@echo "... roscpp_generate_messages_lisp"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
+	@echo "... cpp_config"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... dynamic_reconfigure_generate_messages_lisp"
 	@echo "... _intro_pkg1_generate_messages_check_deps_Equ"
