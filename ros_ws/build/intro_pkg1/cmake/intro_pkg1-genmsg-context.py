@@ -1,7 +1,7 @@
 # generated from genmsg/cmake/pkg-genmsg.context.in
 
 messages_str = "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg"
-services_str = ""
+services_str = "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
 pkg_name = "intro_pkg1"
 dependencies_str = "std_msgs"
 langs = "gencpp;geneus;genlisp;gennodejs;genpy"

@@ -56,11 +56,12 @@ add_message_files(
 )
 
 ## Generate services in the 'srv' folder
-# add_service_files(
-#   FILES
+add_service_files(
+  FILES
+  FloatIO.srv
 #   Service1.srv
 #   Service2.srv
-# )
+)
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -143,6 +144,8 @@ add_executable(NumberPublisher src/NumberPublisher.cpp)
 add_executable(NumberSubscriber src/NumberSubscriber.cpp)
 add_executable(MSG_Publisher src/Publisher1.cpp)
 add_executable(MSG_Subscriber src/Subscriber1.cpp)
+add_executable(EquationServer src/ServiceServer1.cpp)
+add_executable(EquationClient src/ServiceClient1.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -164,6 +167,8 @@ target_link_libraries(NumberPublisher ${catkin_LIBRARIES})
 target_link_libraries(NumberSubscriber ${catkin_LIBRARIES})
 target_link_libraries(MSG_Publisher ${catkin_LIBRARIES})
 target_link_libraries(MSG_Subscriber ${catkin_LIBRARIES})
+target_link_libraries(EquationServer ${catkin_LIBRARIES})
+target_link_libraries(EquationClient ${catkin_LIBRARIES})
 
 #############
 ## Install ##

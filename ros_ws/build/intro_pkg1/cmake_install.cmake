@@ -42,6 +42,10 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/intro_pkg1/srv" TYPE FILE FILES "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/intro_pkg1/cmake" TYPE FILE FILES "/home/stark/ROS_workspaces/ros_ws/build/intro_pkg1/catkin_generated/installspace/intro_pkg1-msg-paths.cmake")
 endif()
 

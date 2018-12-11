@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/intro_pkg1_generate_messages_cpp"
   "/home/stark/ROS_workspaces/ros_ws/devel/include/intro_pkg1/Equ.h"
+  "/home/stark/ROS_workspaces/ros_ws/devel/include/intro_pkg1/FloatIO.h"
 )
 
 # Per-language clean rules from dependency scanning.

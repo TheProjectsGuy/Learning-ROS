@@ -288,21 +288,6 @@ intro_pkg1_gencpp/fast:
 .PHONY : intro_pkg1_gencpp/fast
 
 # Convenience name for target.
-intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
-.PHONY : intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
-
-# Convenience name for target.
-intro_pkg1_geneus: intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
-
-.PHONY : intro_pkg1_geneus
-
-# fast build rule for target.
-intro_pkg1_geneus/fast:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/build.make intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/build
-.PHONY : intro_pkg1_geneus/fast
-
-# Convenience name for target.
 intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs.dir/rule:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs.dir/rule
 .PHONY : intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs.dir/rule
@@ -363,6 +348,21 @@ rosgraph_msgs_generate_messages_lisp/fast:
 .PHONY : rosgraph_msgs_generate_messages_lisp/fast
 
 # Convenience name for target.
+intro_pkg1/CMakeFiles/EquationServer.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/EquationServer.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/EquationServer.dir/rule
+
+# Convenience name for target.
+EquationServer: intro_pkg1/CMakeFiles/EquationServer.dir/rule
+
+.PHONY : EquationServer
+
+# fast build rule for target.
+EquationServer/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationServer.dir/build.make intro_pkg1/CMakeFiles/EquationServer.dir/build
+.PHONY : EquationServer/fast
+
+# Convenience name for target.
 intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
 .PHONY : intro_pkg1/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
@@ -406,6 +406,21 @@ ArgumentParser: intro_pkg1/CMakeFiles/ArgumentParser.dir/rule
 ArgumentParser/fast:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/ArgumentParser.dir/build.make intro_pkg1/CMakeFiles/ArgumentParser.dir/build
 .PHONY : ArgumentParser/fast
+
+# Convenience name for target.
+intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/rule
+
+# Convenience name for target.
+_intro_pkg1_generate_messages_check_deps_FloatIO: intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/rule
+
+.PHONY : _intro_pkg1_generate_messages_check_deps_FloatIO
+
+# fast build rule for target.
+_intro_pkg1_generate_messages_check_deps_FloatIO/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/build.make intro_pkg1/CMakeFiles/_intro_pkg1_generate_messages_check_deps_FloatIO.dir/build
+.PHONY : _intro_pkg1_generate_messages_check_deps_FloatIO/fast
 
 # Convenience name for target.
 intro_pkg1/CMakeFiles/roscpp_generate_messages_lisp.dir/rule:
@@ -496,6 +511,36 @@ intro_pkg1_generate_messages_cpp: intro_pkg1/CMakeFiles/intro_pkg1_generate_mess
 intro_pkg1_generate_messages_cpp/fast:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_cpp.dir/build.make intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_cpp.dir/build
 .PHONY : intro_pkg1_generate_messages_cpp/fast
+
+# Convenience name for target.
+intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# fast build rule for target.
+roscpp_generate_messages_cpp/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+.PHONY : roscpp_generate_messages_cpp/fast
+
+# Convenience name for target.
+intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
+
+# Convenience name for target.
+MSG_Publisher: intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
+
+.PHONY : MSG_Publisher
+
+# fast build rule for target.
+MSG_Publisher/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/MSG_Publisher.dir/build.make intro_pkg1/CMakeFiles/MSG_Publisher.dir/build
+.PHONY : MSG_Publisher/fast
 
 # Convenience name for target.
 intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_eus.dir/rule:
@@ -633,34 +678,34 @@ MSG_Subscriber/fast:
 .PHONY : MSG_Subscriber/fast
 
 # Convenience name for target.
-intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-.PHONY : intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_cpp: intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+intro_pkg1_geneus: intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/rule
 
-.PHONY : roscpp_generate_messages_cpp
+.PHONY : intro_pkg1_geneus
 
 # fast build rule for target.
-roscpp_generate_messages_cpp/fast:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make intro_pkg1/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-.PHONY : roscpp_generate_messages_cpp/fast
+intro_pkg1_geneus/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/build.make intro_pkg1/CMakeFiles/intro_pkg1_geneus.dir/build
+.PHONY : intro_pkg1_geneus/fast
 
 # Convenience name for target.
-intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
-.PHONY : intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
+intro_pkg1/CMakeFiles/EquationClient.dir/rule:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f CMakeFiles/Makefile2 intro_pkg1/CMakeFiles/EquationClient.dir/rule
+.PHONY : intro_pkg1/CMakeFiles/EquationClient.dir/rule
 
 # Convenience name for target.
-MSG_Publisher: intro_pkg1/CMakeFiles/MSG_Publisher.dir/rule
+EquationClient: intro_pkg1/CMakeFiles/EquationClient.dir/rule
 
-.PHONY : MSG_Publisher
+.PHONY : EquationClient
 
 # fast build rule for target.
-MSG_Publisher/fast:
-	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/MSG_Publisher.dir/build.make intro_pkg1/CMakeFiles/MSG_Publisher.dir/build
-.PHONY : MSG_Publisher/fast
+EquationClient/fast:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationClient.dir/build.make intro_pkg1/CMakeFiles/EquationClient.dir/build
+.PHONY : EquationClient/fast
 
 src/ArgumentParser.o: src/ArgumentParser.cpp.o
 
@@ -797,6 +842,60 @@ src/Publisher1.cpp.s:
 	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/MSG_Publisher.dir/build.make intro_pkg1/CMakeFiles/MSG_Publisher.dir/src/Publisher1.cpp.s
 .PHONY : src/Publisher1.cpp.s
 
+src/ServiceClient1.o: src/ServiceClient1.cpp.o
+
+.PHONY : src/ServiceClient1.o
+
+# target to build an object file
+src/ServiceClient1.cpp.o:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationClient.dir/build.make intro_pkg1/CMakeFiles/EquationClient.dir/src/ServiceClient1.cpp.o
+.PHONY : src/ServiceClient1.cpp.o
+
+src/ServiceClient1.i: src/ServiceClient1.cpp.i
+
+.PHONY : src/ServiceClient1.i
+
+# target to preprocess a source file
+src/ServiceClient1.cpp.i:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationClient.dir/build.make intro_pkg1/CMakeFiles/EquationClient.dir/src/ServiceClient1.cpp.i
+.PHONY : src/ServiceClient1.cpp.i
+
+src/ServiceClient1.s: src/ServiceClient1.cpp.s
+
+.PHONY : src/ServiceClient1.s
+
+# target to generate assembly for a file
+src/ServiceClient1.cpp.s:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationClient.dir/build.make intro_pkg1/CMakeFiles/EquationClient.dir/src/ServiceClient1.cpp.s
+.PHONY : src/ServiceClient1.cpp.s
+
+src/ServiceServer1.o: src/ServiceServer1.cpp.o
+
+.PHONY : src/ServiceServer1.o
+
+# target to build an object file
+src/ServiceServer1.cpp.o:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationServer.dir/build.make intro_pkg1/CMakeFiles/EquationServer.dir/src/ServiceServer1.cpp.o
+.PHONY : src/ServiceServer1.cpp.o
+
+src/ServiceServer1.i: src/ServiceServer1.cpp.i
+
+.PHONY : src/ServiceServer1.i
+
+# target to preprocess a source file
+src/ServiceServer1.cpp.i:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationServer.dir/build.make intro_pkg1/CMakeFiles/EquationServer.dir/src/ServiceServer1.cpp.i
+.PHONY : src/ServiceServer1.cpp.i
+
+src/ServiceServer1.s: src/ServiceServer1.cpp.s
+
+.PHONY : src/ServiceServer1.s
+
+# target to generate assembly for a file
+src/ServiceServer1.cpp.s:
+	cd /home/stark/ROS_workspaces/ros_ws/build && $(MAKE) -f intro_pkg1/CMakeFiles/EquationServer.dir/build.make intro_pkg1/CMakeFiles/EquationServer.dir/src/ServiceServer1.cpp.s
+.PHONY : src/ServiceServer1.cpp.s
+
 src/Subscriber1.o: src/Subscriber1.cpp.o
 
 .PHONY : src/Subscriber1.o
@@ -834,6 +933,7 @@ help:
 	@echo "... install/local"
 	@echo "... install"
 	@echo "... list_install_components"
+	@echo "... edit_cache"
 	@echo "... _intro_pkg1_generate_messages_check_deps_Equ"
 	@echo "... intro_pkg1_gennodejs"
 	@echo "... std_msgs_generate_messages_py"
@@ -842,21 +942,25 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... intro_pkg1_gencpp"
-	@echo "... intro_pkg1_geneus"
 	@echo "... intro_pkg1_generate_messages_nodejs"
 	@echo "... NumberPublisher"
 	@echo "... std_msgs_generate_messages_cpp"
 	@echo "... rosgraph_msgs_generate_messages_lisp"
+	@echo "... EquationServer"
 	@echo "... rosgraph_msgs_generate_messages_eus"
 	@echo "... intro_pkg1_genpy"
 	@echo "... ArgumentParser"
+	@echo "... test"
+	@echo "... _intro_pkg1_generate_messages_check_deps_FloatIO"
 	@echo "... roscpp_generate_messages_lisp"
-	@echo "... edit_cache"
 	@echo "... roscpp_generate_messages_nodejs"
 	@echo "... roscpp_generate_messages_eus"
 	@echo "... roscpp_generate_messages_py"
 	@echo "... intro_pkg1_generate_messages"
 	@echo "... intro_pkg1_generate_messages_cpp"
+	@echo "... rebuild_cache"
+	@echo "... roscpp_generate_messages_cpp"
+	@echo "... MSG_Publisher"
 	@echo "... intro_pkg1_generate_messages_eus"
 	@echo "... std_msgs_generate_messages_lisp"
 	@echo "... intro_pkg1_generate_messages_lisp"
@@ -866,10 +970,8 @@ help:
 	@echo "... NumberSubscriber"
 	@echo "... AllLevelDebugger"
 	@echo "... MSG_Subscriber"
-	@echo "... test"
-	@echo "... roscpp_generate_messages_cpp"
-	@echo "... MSG_Publisher"
-	@echo "... rebuild_cache"
+	@echo "... intro_pkg1_geneus"
+	@echo "... EquationClient"
 	@echo "... src/ArgumentParser.o"
 	@echo "... src/ArgumentParser.i"
 	@echo "... src/ArgumentParser.s"
@@ -885,6 +987,12 @@ help:
 	@echo "... src/Publisher1.o"
 	@echo "... src/Publisher1.i"
 	@echo "... src/Publisher1.s"
+	@echo "... src/ServiceClient1.o"
+	@echo "... src/ServiceClient1.i"
+	@echo "... src/ServiceClient1.s"
+	@echo "... src/ServiceServer1.o"
+	@echo "... src/ServiceServer1.i"
+	@echo "... src/ServiceServer1.s"
 	@echo "... src/Subscriber1.o"
 	@echo "... src/Subscriber1.i"
 	@echo "... src/Subscriber1.s"

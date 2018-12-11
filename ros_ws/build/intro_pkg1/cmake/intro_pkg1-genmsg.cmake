@@ -1,6 +1,6 @@
 # generated from genmsg/cmake/pkg-genmsg.cmake.em
 
-message(STATUS "intro_pkg1: 1 messages, 0 services")
+message(STATUS "intro_pkg1: 1 messages, 1 services")
 
 set(MSG_I_FLAGS "-Iintro_pkg1:/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg;-Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg")
 
@@ -16,6 +16,11 @@ add_custom_target(intro_pkg1_generate_messages ALL)
 # verify that message/service dependencies have not changed since configure
 
 
+
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_custom_target(_intro_pkg1_generate_messages_check_deps_${_filename}
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "intro_pkg1" "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" ""
+)
 
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_custom_target(_intro_pkg1_generate_messages_check_deps_${_filename}
@@ -36,6 +41,12 @@ _generate_msg_cpp(intro_pkg1
 )
 
 ### Generating Services
+_generate_srv_cpp(intro_pkg1
+  "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/intro_pkg1
+)
 
 ### Generating Module File
 _generate_module_cpp(intro_pkg1
@@ -49,6 +60,8 @@ add_custom_target(intro_pkg1_generate_messages_cpp
 add_dependencies(intro_pkg1_generate_messages intro_pkg1_generate_messages_cpp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_dependencies(intro_pkg1_generate_messages_cpp _intro_pkg1_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_dependencies(intro_pkg1_generate_messages_cpp _intro_pkg1_generate_messages_check_deps_${_filename})
 
@@ -69,6 +82,12 @@ _generate_msg_eus(intro_pkg1
 )
 
 ### Generating Services
+_generate_srv_eus(intro_pkg1
+  "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/intro_pkg1
+)
 
 ### Generating Module File
 _generate_module_eus(intro_pkg1
@@ -82,6 +101,8 @@ add_custom_target(intro_pkg1_generate_messages_eus
 add_dependencies(intro_pkg1_generate_messages intro_pkg1_generate_messages_eus)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_dependencies(intro_pkg1_generate_messages_eus _intro_pkg1_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_dependencies(intro_pkg1_generate_messages_eus _intro_pkg1_generate_messages_check_deps_${_filename})
 
@@ -102,6 +123,12 @@ _generate_msg_lisp(intro_pkg1
 )
 
 ### Generating Services
+_generate_srv_lisp(intro_pkg1
+  "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/intro_pkg1
+)
 
 ### Generating Module File
 _generate_module_lisp(intro_pkg1
@@ -115,6 +142,8 @@ add_custom_target(intro_pkg1_generate_messages_lisp
 add_dependencies(intro_pkg1_generate_messages intro_pkg1_generate_messages_lisp)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_dependencies(intro_pkg1_generate_messages_lisp _intro_pkg1_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_dependencies(intro_pkg1_generate_messages_lisp _intro_pkg1_generate_messages_check_deps_${_filename})
 
@@ -135,6 +164,12 @@ _generate_msg_nodejs(intro_pkg1
 )
 
 ### Generating Services
+_generate_srv_nodejs(intro_pkg1
+  "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/intro_pkg1
+)
 
 ### Generating Module File
 _generate_module_nodejs(intro_pkg1
@@ -148,6 +183,8 @@ add_custom_target(intro_pkg1_generate_messages_nodejs
 add_dependencies(intro_pkg1_generate_messages intro_pkg1_generate_messages_nodejs)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_dependencies(intro_pkg1_generate_messages_nodejs _intro_pkg1_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_dependencies(intro_pkg1_generate_messages_nodejs _intro_pkg1_generate_messages_check_deps_${_filename})
 
@@ -168,6 +205,12 @@ _generate_msg_py(intro_pkg1
 )
 
 ### Generating Services
+_generate_srv_py(intro_pkg1
+  "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv"
+  "${MSG_I_FLAGS}"
+  ""
+  ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/intro_pkg1
+)
 
 ### Generating Module File
 _generate_module_py(intro_pkg1
@@ -181,6 +224,8 @@ add_custom_target(intro_pkg1_generate_messages_py
 add_dependencies(intro_pkg1_generate_messages intro_pkg1_generate_messages_py)
 
 # add dependencies to all check dependencies targets
+get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv" NAME_WE)
+add_dependencies(intro_pkg1_generate_messages_py _intro_pkg1_generate_messages_check_deps_${_filename})
 get_filename_component(_filename "/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg" NAME_WE)
 add_dependencies(intro_pkg1_generate_messages_py _intro_pkg1_generate_messages_check_deps_${_filename})
 

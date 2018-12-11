@@ -54,6 +54,7 @@ CMAKE_BINARY_DIR = /home/stark/ROS_workspaces/ros_ws/build
 include intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs.dir/progress.make
 
 intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs: /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/msg/Equ.js
+intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs: /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/srv/FloatIO.js
 
 
 /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/msg/Equ.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
@@ -61,8 +62,14 @@ intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs: /home/stark/ROS_works
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from intro_pkg1/Equ.msg"
 	cd /home/stark/ROS_workspaces/ros_ws/build/intro_pkg1 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg/Equ.msg -Iintro_pkg1:/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p intro_pkg1 -o /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/msg
 
+/home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/srv/FloatIO.js: /opt/ros/melodic/lib/gennodejs/gen_nodejs.py
+/home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/srv/FloatIO.js: /home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/stark/ROS_workspaces/ros_ws/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from intro_pkg1/FloatIO.srv"
+	cd /home/stark/ROS_workspaces/ros_ws/build/intro_pkg1 && ../catkin_generated/env_cached.sh /usr/bin/python2 /opt/ros/melodic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/srv/FloatIO.srv -Iintro_pkg1:/home/stark/ROS_workspaces/ros_ws/src/intro_pkg1/msg -Istd_msgs:/opt/ros/melodic/share/std_msgs/cmake/../msg -p intro_pkg1 -o /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/srv
+
 intro_pkg1_generate_messages_nodejs: intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs
 intro_pkg1_generate_messages_nodejs: /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/msg/Equ.js
+intro_pkg1_generate_messages_nodejs: /home/stark/ROS_workspaces/ros_ws/devel/share/gennodejs/ros/intro_pkg1/srv/FloatIO.js
 intro_pkg1_generate_messages_nodejs: intro_pkg1/CMakeFiles/intro_pkg1_generate_messages_nodejs.dir/build.make
 
 .PHONY : intro_pkg1_generate_messages_nodejs
