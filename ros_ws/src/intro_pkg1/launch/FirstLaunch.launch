@@ -1,0 +1,5 @@
+<launch>
+    <!-- Argument parser made using C++ -->
+    <node name="Debugger1" pkg="intro_pkg1" type="AllLevelDebugger" launch-prefix="gnome-terminal --tab -e "/> 
+    <node name="Debugger2" pkg="intro_pkg1" type="DebuggerAll.py" launch-prefix="gnome-terminal --tab -e"/>
+</launch>
