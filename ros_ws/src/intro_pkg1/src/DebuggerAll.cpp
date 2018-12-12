@@ -4,16 +4,12 @@
 int main(int argc, char **argv) {
     // Initialize ROS node
     ros::init(argc, argv, "DebuggerCheck");
-
     // Node handler
     ros::NodeHandle nodeHandler;
-
     // Perform cycle 2 times a second (2 Hz)
     ros::Rate rateHandler = ros::Rate(2);
-
     // Condition for the conditional debugger statements
     bool printCondition = true;
-
     while(ros::ok()) {
         // Clear screen
         system("clear");
@@ -39,6 +35,5 @@ int main(int argc, char **argv) {
         // Cause a delay
         rateHandler.sleep();
     }
-
     return 0;
 }
