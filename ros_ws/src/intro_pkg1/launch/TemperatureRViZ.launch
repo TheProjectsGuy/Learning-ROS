@@ -1,0 +1,7 @@
+<launch>
+    <!-- Arguments to load -->
+    <arg name="rvizconfig" default="$(find intro_pkg1)/rviz/TempConfig.rviz" doc="Pass the path and full name to RViZ configuration file" />
+    <!-- Nodes to launch -->
+    <node name="TempSensor" pkg="intro_pkg1" type="TempSimSensor" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
+</launch>

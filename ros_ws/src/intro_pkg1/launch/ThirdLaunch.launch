@@ -1,0 +1,8 @@
+<launch>
+    <arg name="agr1" default="argument1" />
+    <arg name="agr2" default="argument2" />
+    <arg name="agr3" default="argument3" />
+    <!-- Argument parser made using C++ -->
+    <node name="Debugger1" pkg="intro_pkg1" type="ArgumentParser" output="screen" args="$(arg arg1) $(arg arg2) $(arg arg3)" /> 
+    <node name="Debugger2" pkg="intro_pkg1" type="ArgsParser.py" output="screen" args="$(arg arg1) $(arg arg2) $(arg arg3)" />
+</launch>

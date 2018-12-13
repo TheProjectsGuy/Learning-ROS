@@ -13,6 +13,7 @@ find_package(catkin REQUIRED COMPONENTS
   std_msgs
   message_generation
   dynamic_reconfigure
+  sensor_msgs
 )
 
 ## System dependencies are found with CMake's conventions
@@ -149,6 +150,7 @@ add_executable(MSG_Subscriber src/Subscriber1.cpp)
 add_executable(EquationServer src/ServiceServer1.cpp)
 add_executable(EquationClient src/ServiceClient1.cpp)
 add_executable(cpp_config src/DynamicConfig.cpp)
+add_executable(TempSimSensor src/TempSensor.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -175,6 +177,7 @@ target_link_libraries(MSG_Subscriber ${catkin_LIBRARIES})
 target_link_libraries(EquationServer ${catkin_LIBRARIES})
 target_link_libraries(EquationClient ${catkin_LIBRARIES})
 target_link_libraries(cpp_config ${catkin_LIBRARIES})
+target_link_libraries(TempSimSensor ${catkin_LIBRARIES})
 
 #############
 ## Install ##
