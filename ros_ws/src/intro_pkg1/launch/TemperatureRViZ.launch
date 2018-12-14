@@ -1,7 +1,9 @@
 <launch>
     <!-- Arguments to load -->
     <arg name="rvizconfig" default="$(find intro_pkg1)/rviz/TempConfig.rviz" doc="Pass the path and full name to RViZ configuration file" />
+    <!-- Environment variable -->
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find intro_pkg1)/config/rosconsole_cpp.conf" />
     <!-- Nodes to launch -->
-    <node name="TempSensor" pkg="intro_pkg1" type="TempSimSensor" />
+    <node name="TempSensor" pkg="intro_pkg1" type="TempSimSensor" launch-prefix="gnome-terminal --tab -e " />
     <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rvizconfig)" required="true" />
 </launch>
