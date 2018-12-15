@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<robot name="Robot1">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 1.5" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.1 0.2 3.0"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+    <link name="link1">
+        <visual>
+            <origin xyz="0.0 0.0 1.5" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.1 0.2 3.0"/>
+            </geometry>
+            <material name="red" />
+        </visual>
+    </link>
+    <link name="link2">
+        <visual>
+            <origin xyz="0.0 0.0 1.5" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.1 0.2 3.0"/>
+            </geometry>
+            <material name="red" />
+        </visual>
+    </link>
+    <joint name="joint_1" type="continuous">
+        <origin xyz="0.0 0.0 3.0" rpy="0.0 0.0 0.0"/>
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+    <joint name="joint_2" type="continuous">
+        <origin xyz="0.0 0.0 3.0" rpy="0.0 0.0 0.0"/>
+        <parent link="link1"/>
+        <child link="link2"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+</robot>

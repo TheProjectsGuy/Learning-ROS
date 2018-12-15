@@ -1,2 +1,2 @@
-intro_pkg1
+intro_pkg1:intro_robot_description
 -DCATKIN_DEVEL_PREFIX=/home/stark/ROS_workspaces/ros_ws/devel -DCMAKE_INSTALL_PREFIX=/home/stark/ROS_workspaces/ros_ws/install -G Unix Makefiles

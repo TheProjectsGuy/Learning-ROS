@@ -123,6 +123,7 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/stark/ROS_workspaces/ros_ws/build/gtest/cmake_install.cmake")
   include("/home/stark/ROS_workspaces/ros_ws/build/intro_pkg1/cmake_install.cmake")
+  include("/home/stark/ROS_workspaces/ros_ws/build/intro_robot_description/cmake_install.cmake")
 
 endif()
 
