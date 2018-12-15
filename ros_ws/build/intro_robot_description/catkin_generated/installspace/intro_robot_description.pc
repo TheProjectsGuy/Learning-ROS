@@ -1,0 +1,8 @@
+prefix=/home/stark/ROS_workspaces/ros_ws/install
+
+Name: intro_robot_description
+Description: Description of intro_robot_description
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/stark/ROS_workspaces/ros_ws/install/lib 
+Requires: 
