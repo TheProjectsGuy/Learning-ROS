@@ -25,4 +25,46 @@
     <gazebo reference="bl_wheel">
         <material>Gazebo/Black</material>
     </gazebo>
+    <!-- For the link: camera_link -->
+    <gazebo reference="camera_link">
+        <!-- Material -->
+        <material>Gazebo/Blue</material>
+        <!-- Camera sensor -->
+        <sensor type="camera" name="camera1">
+            <!-- Frame rate -->
+            <update_rate>30.0</update_rate>
+            <!-- Camera properties -->
+            <camera name="head">
+                <!-- Horizontal field of view -->
+                <horizontal_fov>1.3962634</horizontal_fov>
+                <!-- Image properties -->
+                <image>
+                    <width>800</width>
+                    <height>800</height>
+                    <format>R8G8B8</format>
+                </image>
+                <!-- Clip images to distance -->
+                <clip>
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+                <!-- Gaussian noise -->
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.00</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <!-- Camera plugin -->
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <!-- Topic names -->
+                <imageTopicName>/four_wheel_bot/camera/image_raw</imageTopicName>
+                <cameraInfoTopicName>/four_wheel_bot/camera/camera_info</cameraInfoTopicName>
+                <!-- Camera frame -->
+                <frameName>camera_link</frameName>
+            </plugin>
+        </sensor>
+    </gazebo>
 </robot>
