@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<robot>
+    <!-- For the robot -->
+    <gazebo>
+        <static>true</static>
+    </gazebo>
+
+    <!-- For the link: base_link -->
+    <gazebo reference="base_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <!-- For the link: fr_wheel (front right wheel) -->
+    <gazebo reference="fr_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: br_wheel (back right wheel) -->
+    <gazebo reference="br_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: fl_wheel (front left wheel) -->
+    <gazebo reference="fl_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: bl_wheel (back left wheel) -->
+    <gazebo reference="bl_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+</robot>

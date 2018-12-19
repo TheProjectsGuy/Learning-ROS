@@ -1,0 +1,22 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="robot" default="four_wheel_bot" doc="Name (without extension) of XACRO robot description file in urdf folder" />
+    <arg name="spawn_z" default="0.25" doc="Spawn Z value of robot in Gazebo" />
+    <arg name="world" default="FirstWorld" doc="Name (without extension) of WORLD file in worlds folder" />
+    <arg name="rviz" default="false" doc="Launch RViZ (true) or not (false)" />
+    <arg name="rviz_config" default="RobotViewer" doc="Name (without extension) of RViZ configuration file in rviz folder" />
+    <arg name="rviz_use_gui" default="true" doc="Parameter use_gui for RViZ" />
+    <!-- ROS Parameters -->
+    <param name="robot_description" command="xacro $(find intro_robot_description)/urdf/$(arg robot).xacro" />
+    <param name="use_gui" value="$(arg rviz_use_gui)" />
+    <!-- Node launchers -->
+    <!-- Gazebo -->
+    <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(find intro_robot_description)/worlds/$(arg world).world" required="true" />
+    <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" args="-urdf -param robot_description -model $(arg robot) -z $(arg spawn_z)" />
+    <group if="$(arg rviz)">
+        <!-- RViZ -->
+        <node name="rviz" pkg="rviz" type="rviz" args="-d $(find intro_robot_description)/rviz/$(arg rviz_config).rviz" required="true" />
+        <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+        <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    </group>
+</launch>
