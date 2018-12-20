@@ -5,7 +5,7 @@
     <arg name="world" default="FirstWorld" doc="Name (without extension) of WORLD file in worlds folder" />
     <arg name="rviz" default="false" doc="Launch RViZ (true) or not (false)" />
     <arg name="rviz_config" default="RobotViewer" doc="Name (without extension) of RViZ configuration file in rviz folder" />
-    <arg name="rviz_use_gui" default="true" doc="Parameter use_gui for RViZ" />
+    <arg name="rviz_use_gui" default="false" doc="Parameter use_gui for RViZ" />
     <!-- ROS Parameters -->
     <param name="robot_description" command="xacro $(find intro_robot_description)/urdf/$(arg robot).xacro" />
     <param name="use_gui" value="$(arg rviz_use_gui)" />
