@@ -1,0 +1,8 @@
+<launch>
+    <!-- Environment using config -->
+    <env name="ROSCONSOLE_CONFIG_FILE" value="$(find intro_pkg1)/config/rosconsole_cpp.conf" />
+    <env name="ROS_PYTHON_LOG_CONFIG_FILE" value="$(find intro_pkg1)/config/rosconsole_python.conf" />
+    <!-- Argument parser made using C++ -->
+    <node name="Debugger1" pkg="intro_pkg1" type="AllLevelDebugger" launch-prefix="gnome-terminal --tab -e "/> 
+    <node name="Debugger2" pkg="intro_pkg1" type="DebuggerAll.py" launch-prefix="gnome-terminal --tab -e" />
+</launch>

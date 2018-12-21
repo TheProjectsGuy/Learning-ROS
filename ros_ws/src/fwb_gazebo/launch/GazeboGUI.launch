@@ -1,0 +1,8 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="world" default="$(find fwb_gazebo)/worlds/FirstWorld.world" 
+        doc="World file (full path with extension)" />
+
+    <!-- Nodes to be launched -->
+    <node name="gazebo" pkg="gazebo_ros" type="gazebo" args="$(arg world)" required="true" />
+</launch>

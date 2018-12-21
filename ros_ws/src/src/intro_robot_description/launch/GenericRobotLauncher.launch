@@ -1,0 +1,14 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="robot_02" doc="File name (without extension) of the robot to be spawned in the package" />
+    <arg name="rviz_config" default="RobotViewer" doc="File name (without extension) of RViZ configuration file" />
+    <!-- Parameter server -->
+    <param name="robot_description" command="cat $(find intro_robot_description)/urdf/$(arg model).urdf" />
+    <param name="use_gui" value="true" />
+    <!-- Nodes to be launched -->
+    <!-- RViZ -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find intro_robot_description)/rviz/$(arg rviz_config).rviz" required="true" />
+    <!-- Robot State publisher and Joint state publisher -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+</launch>

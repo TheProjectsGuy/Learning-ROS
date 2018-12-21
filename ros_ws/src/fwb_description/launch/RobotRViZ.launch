@@ -1,0 +1,10 @@
+<launch>
+    <!-- Arguemnts -->
+    <arg name="rviz_config" default="$(find fwb_description)/rviz/RobotConfiguration.rviz" 
+        doc="Full name of RViZ configuration file with extension" />
+    
+    <!-- Nodes to be launched -->
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(arg rviz_config)" required="true"/>
+    <node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher" />
+</launch>

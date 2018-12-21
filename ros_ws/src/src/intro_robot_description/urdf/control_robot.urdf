@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<robot name="simple_robot">
+    <link name="base_link">
+        <visual>
+            <origin xyz="0.0 0.0 0.125" />
+            <geometry>
+                <box size="0.25 0.25 0.25"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+    </link>
+    <link name="link1">
+        <visual>
+            <origin xyz="0.0 0.0 0.5" />
+            <geometry>
+                <cylinder radius="0.125" length="1" />
+            </geometry>
+            <material name="red" />
+        </visual>
+    </link>
+    <joint name="joint1" type="continuous">
+        <parent link="base_link"/>
+        <child link="link1"/>
+        <origin xyz="0.0 0.0 0.25"/>
+        <axis xyz="1.0 0.0 0.0"/>
+    </joint>
+</robot>

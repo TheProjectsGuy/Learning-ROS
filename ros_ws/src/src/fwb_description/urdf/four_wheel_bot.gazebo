@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<robot>
+    <!-- For the robot -->
+    <gazebo>
+        <static>false</static>
+        <plugin filename="libgazebo_ros_skid_steer_drive.so" name="skid_steer_drive_controller">
+            <!-- Update rate -->
+            <updateRate>100</updateRate>
+            <!-- Wheel joint names from XACRO file -->
+            <rightFrontJoint>wheel_fr</rightFrontJoint>
+            <leftFrontJoint>wheel_fl</leftFrontJoint>
+            <rightRearJoint>wheel_br</rightRearJoint>
+            <leftRearJoint>wheel_bl</leftRearJoint>
+            <!-- Wheel separation: Distance b/w front and rear (1.4 for us) -->
+            <wheelSeparation>1.4</wheelSeparation>
+            <!-- Wheel diameter: 0.5 here -->
+            <wheelDiameter>0.5</wheelDiameter>
+            <!-- Robot base link -->
+            <robotBaseFrame>base_link</robotBaseFrame>
+            <!-- Torque for the joints -->
+            <torque>20</torque>
+            <!-- Topic name for command velocities -->
+            <commandTopic>cmd_vel</commandTopic>
+        </plugin>
+    </gazebo>
+    <!-- For the link: base_link -->
+    <gazebo reference="base_link">
+        <material>Gazebo/Orange</material>
+    </gazebo>
+    <!-- For the link: fr_wheel (front right wheel) -->
+    <gazebo reference="fr_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: br_wheel (back right wheel) -->
+    <gazebo reference="br_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: fl_wheel (front left wheel) -->
+    <gazebo reference="fl_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: bl_wheel (back left wheel) -->
+    <gazebo reference="bl_wheel">
+        <material>Gazebo/Black</material>
+    </gazebo>
+    <!-- For the link: camera_link -->
+    <gazebo reference="camera_link">
+        <!-- Material -->
+        <material>Gazebo/Blue</material>
+        <!-- Camera sensor -->
+        <sensor type="camera" name="camera1">
+            <!-- Frame rate -->
+            <update_rate>30.0</update_rate>
+            <!-- Camera properties -->
+            <camera name="head">
+                <!-- Horizontal field of view -->
+                <horizontal_fov>1.3962634</horizontal_fov>
+                <!-- Image properties -->
+                <image>
+                    <width>800</width>
+                    <height>800</height>
+                    <format>R8G8B8</format>
+                </image>
+                <!-- Clip images to distance -->
+                <clip>
+                    <near>0.02</near>
+                    <far>300</far>
+                </clip>
+                <!-- Gaussian noise -->
+                <noise>
+                    <type>gaussian</type>
+                    <mean>0.00</mean>
+                    <stddev>0.007</stddev>
+                </noise>
+            </camera>
+            <!-- Camera plugin -->
+            <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
+                <alwaysOn>true</alwaysOn>
+                <updateRate>0.0</updateRate>
+                <!-- Topic names -->
+                <imageTopicName>/four_wheel_bot/camera/image_raw</imageTopicName>
+                <cameraInfoTopicName>/four_wheel_bot/camera/camera_info</cameraInfoTopicName>
+                <!-- Camera frame -->
+                <frameName>camera_link</frameName>
+                <hackBaseline>0.07</hackBaseline>
+                <distortionK1>0.0</distortionK1>
+                <distortionK2>0.0</distortionK2>
+                <distortionK3>0.0</distortionK3>
+                <distortionT1>0.0</distortionT1>
+                <distortionT2>0.0</distortionT2>
+            </plugin>
+        </sensor>
+    </gazebo>
+</robot>

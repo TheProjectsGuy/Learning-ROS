@@ -1,0 +1,8 @@
+prefix=/home/stark/ROS_workspaces/ros_ws/install
+
+Name: fwb_gazebo
+Description: Description of fwb_gazebo
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/stark/ROS_workspaces/ros_ws/install/lib 
+Requires: 

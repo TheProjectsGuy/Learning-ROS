@@ -1,0 +1,17 @@
+<launch>
+    <!-- Arguments -->
+    <arg name="model" default="four_wheel_bot" doc="Model name (name of the XACRO file without extension)" />
+    <arg name="rviz_config" default="RobotConfiguration" doc="Name (withoug extension) of RViZ configuration file in 'rviz' folder" />
+    <arg name="use_gui" default="true" doc="true or false, if you want GUI" />
+
+    <!-- Parameters on the ROS parameter server -->
+    <param name="robot_description" command="xacro $(find fwb_description)/urdf/$(arg model).xacro" />
+    <param name="use_gui" value="$(arg use_gui)" />
+
+    <!-- Nodes to be launched -->
+    <!-- RViZ node -->
+    <node name="rviz" type="rviz" pkg="rviz" args="-d $(find fwb_description)/rviz/$(arg rviz_config).rviz" required="true" />
+    <!-- Joint state and robot state publishers -->
+    <node name="joint_state_publisher" type="joint_state_publisher" pkg="joint_state_publisher" />
+    <node name="robot_state_publisher" type="robot_state_publisher" pkg="robot_state_publisher" />
+</launch>

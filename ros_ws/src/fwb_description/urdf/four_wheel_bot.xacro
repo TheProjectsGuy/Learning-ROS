@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<robot name="four_wheel_bot" xmlns:xacro="http://www.ros.org/wiki/xacro">
+    <!-- ==== Parameters ==== -->
+    <xacro:property name="wheel_dia" value="0.5" />
+    <xacro:property name="wheel_thickness" value="0.25" />
+    <!-- Dimension of chassis -->
+    <xacro:property name="width" value="1.4" />     <!-- X dimension -->
+    <xacro:property name="length" value="1" />    <!-- Y dimension -->
+    <xacro:property name="depth" value="0.5" />    <!-- Z dimension -->
+    <xacro:property name="camera_len" value="0.125" /> <!-- Camera square side length -->
+    
+    <!-- ==== Include files ==== -->
+    <!-- Gazebo file include -->
+    <xacro:include filename="four_wheel_bot.gazebo" />
+
+    <!-- ==== Macros ==== -->
+    <!-- Attach the wheel at Pitch -1.57079632679 -->
+    <xacro:macro name="attach_wheels" params="name parent:=base_link x y z:=0 reflect">
+        <!-- Parameters -->
+        <!-- @name: Name of the wheel link. Actual name will be "${name}_wheel. Joint name will be wheel_${name}" -->
+        <!-- @parent: Name of parent link. Default value "base_link" -->
+        <!-- @x, @y and @z: Position of the wheel origin -->
+        <!-- @reflect: Reflection of positioning, -1 for right sided and 1 for left sided -->
+        <!-- Link definitions -->
+        <link name="${name}_wheel">
+            <collision>
+                <origin xyz="0.0 0.0 ${reflect * wheel_thickness/2}"/>
+                <geometry>
+                    <cylinder radius="${wheel_dia/2}" length="${wheel_thickness}"/>
+                </geometry>
+            </collision>
+            <visual>
+                <origin xyz="0.0 0.0 ${reflect * wheel_thickness/2}"/>
+                <geometry>
+                    <cylinder radius="${wheel_dia/2}" length="${wheel_thickness}"/>
+                </geometry>
+                <material name="red" />
+            </visual>
+            <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.5"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" 
+                               iyy="1.0" iyz="0.0" 
+                                         izz="1.0"/>
+        </inertial>
+        </link>
+        <!-- Joint definition -->
+        <joint name="wheel_${name}" type="continuous">
+            <origin xyz="${x} ${y} ${z}" rpy="-1.57079632679 0.0 0.0"/>
+            <parent link="${parent}"/>
+            <child link="${name}_wheel"/>
+            <axis xyz="0.0 0.0 1.0"/>
+        </joint>
+    </xacro:macro>
+
+    <!-- ==== Main code ==== -->
+    <!-- === Links === -->
+    <!-- Base link -->
+    <link name="base_link">
+        <collision>
+            <origin xyz="0.0 0.0 ${depth/2}"/>
+            <geometry>
+                <box size="${width} ${length} ${depth}"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.0 0.0 ${depth/2}"/>
+            <geometry>
+                <box size="${width} ${length} ${depth}"/>
+            </geometry>
+            <material name="red">
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="2.0"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" 
+                               iyy="1.0" iyz="0.0" 
+                                         izz="1.0"/>
+            
+        </inertial>
+    </link>
+    <!-- Front right wheel -->
+    <xacro:attach_wheels name="fr" x="${width/2}" y="${-length/2}" reflect="-1" />
+    <!-- Front left wheel -->
+    <xacro:attach_wheels name="fl" x="${width/2}" y="${length/2}" reflect="1" />
+    <!-- Back right wheel -->
+    <xacro:attach_wheels name="br" x="${-width/2}" y="${-length/2}" reflect="-1" />
+    <!-- Back left wheel -->
+    <xacro:attach_wheels name="bl" x="${-width/2}" y="${length/2}" reflect="1" />
+    <!-- Camera sensor joint -->
+    <joint name="joint_name" type="fixed">
+        <parent link="base_link" />
+        <child link="camera_link" />
+        <origin xyz="${width/2 - camera_len/2} 0.0 ${depth}" rpy="0.0 0.0 0.0" />
+    </joint>
+    <!-- Camera sensor link -->
+    <link name="camera_link">
+        <collision>
+            <origin xyz="0.0 0.0 ${camera_len/2}"/>
+            <geometry>
+                <box size="${camera_len} ${camera_len} ${camera_len}"/>
+            </geometry>
+        </collision>
+        <visual>
+            <origin xyz="0.0 0.0 ${camera_len/2}"/>
+            <geometry>
+                <box size="${camera_len} ${camera_len} ${camera_len}"/>
+            </geometry>
+            <material name="red" />
+        </visual>
+        <inertial>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <mass value="0.1"/>
+            <inertia ixx="1.0" ixy="0.0" ixz="0.0" 
+                               iyy="1.0" iyz="0.0" 
+                                         izz="1.0"/>
+            
+        </inertial>
+    </link>
+</robot>
